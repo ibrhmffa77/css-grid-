@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* header-navbar hisse  */
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(24, 24, 70);
+
+}
+.navbar{
+    width: 90%;
+    margin: 0 150px;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    justify-content: space-between;
+}
+.navbar>div>h1{
+    font-size: 30px;
+    color: white;
+}
+.navbar>ul{
+    display: flex;
+    gap: 80px;
+    list-style: none;
+
+}
+.navbar>ul>li>a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.navbar>ul>li>a:hover{
+    color: rgb(203, 135, 8);
+}
+
+
+/* main-grid hisse */
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.grid-container{
+    width: 90%;
+    display: grid;
+    margin: 0 150px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
+    padding: 30px;
+}
+.grid-items{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+ .grid-items>img{
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.items-comment{
+    padding: 20px;
+}
+.items-comment>p{
+    margin-bottom: 10px;
+    color: #666;
+}
+.items-comment>h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.items-comment .social{
+    display: flex;
+    justify-content: space-between;
+}
+.items-comment .social .category{
+    color: #008CBA;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.items-comment .social .social-span{
+    display: flex;
+    gap: 30px;
+}
+
+
+ /* navbar responsivlik */
+
+@media (max-width: 950px) {
+    .navbar > ul{
+        gap: 40px;
+    }
+}
+@media (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar>ul {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .navbar>ul>li {
+        width: 100%;
+    }
+
+    .navbar>ul>li>a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar>div>h1 {
+        font-size: 24px;
+    }
+
+    .navbar>ul>li>a {
+        font-size: 16px;
+    }
+}
+
+/* grid responsivlik */
+
+@media (max-width:768px){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+}
